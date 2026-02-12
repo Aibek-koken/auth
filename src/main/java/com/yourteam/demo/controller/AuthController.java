@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
+
 public class AuthController {
 
     private final AuthService authService;
@@ -18,6 +19,7 @@ public class AuthController {
                            @RequestParam String password) {
         return authService.register(email, password);
     }
+
 
     @PostMapping("/login")
     public String login(@RequestParam String email,
